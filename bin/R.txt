@@ -1,0 +1,3 @@
+int attr layout_color 0x7f010000
+int[] styleable Choser_Layout { 0x7f010000 }
+int styleable Choser_Layout_layout_color 0
