@@ -72,12 +72,13 @@ public class ChooserTop extends FrameLayout implements OnClickListener {
 	private ChooserTopListener listener;
 
 	/**
+	 * 
+	 * <p>
+	 * Creates a customised tabhost with proper touch listeners. Uses Dynamics
+	 * to Animate the View.<br>
+	 * </p>
 	 * @author Riyaz Ahamed <br>
-	 *         <p>
-	 *         Creates a customised tabhost with proper touch listeners. Uses
-	 *         Dynamics to Animate the View.<br>
 	 *         Send Feedbacks to dev.ahamed(at)outlook.com
-	 *         </p>
 	 */
 	public ChooserTop(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -246,8 +247,21 @@ public class ChooserTop extends FrameLayout implements OnClickListener {
 		paint.setAntiAlias(true);
 	}
 
+	public void setSelectedView(View view) {
+		long now = AnimationUtils.currentAnimationTimeMillis();
+		offset.setTargetPosition(view.getLeft(), now);
+		invalidate();
+
+		int color = getLayoutColor(view);
+		indicatorColor.setTargetColor(color, now);
+
+		removeCallbacks(animator);
+		post(animator);
+	}
+
 	static class LayoutParams extends FrameLayout.LayoutParams {
 		int color;
+
 		public LayoutParams(Context context, AttributeSet attrs) {
 			super(context, attrs);
 			TypedArray a = context.obtainStyledAttributes(attrs,

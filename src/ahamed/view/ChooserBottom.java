@@ -38,7 +38,6 @@ public class ChooserBottom extends FrameLayout implements OnClickListener {
 	public interface ChooserBottomListener {
 		public void onItemChosen(int item);
 
-//		public void onColorChanged(int color);
 	}
 
 	private static final int INDICATOR_HEIGHT = 8;
@@ -63,10 +62,6 @@ public class ChooserBottom extends FrameLayout implements OnClickListener {
 			if (!indicatorColor.isAtRest()) {
 				schedlueNewFrame = true;
 			}
-
-//			if (listener != null) {
-//				listener.onColorChanged(indicatorColor.getColor());
-//			}
 
 			if (schedlueNewFrame) {
 				postDelayed(this, 15);
@@ -94,9 +89,6 @@ public class ChooserBottom extends FrameLayout implements OnClickListener {
 
 	public void setChooserListener(ChooserBottomListener listener) {
 		this.listener = listener;
-//		if (listener != null) {
-//			listener.onColorChanged(indicatorColor.getColor());
-//		}
 	}
 
 	public int getColor() {
@@ -256,6 +248,18 @@ public class ChooserBottom extends FrameLayout implements OnClickListener {
 
 		}
 		paint.setAntiAlias(true);
+	}
+	
+	public void setSelectedView(View view) {
+		long now = AnimationUtils.currentAnimationTimeMillis();
+		offset.setTargetPosition(view.getLeft(), now);
+		invalidate();
+
+		int color = getLayoutColor(view);
+		indicatorColor.setTargetColor(color, now);
+
+		removeCallbacks(animator);
+		post(animator);
 	}
 
 	static class LayoutParams extends FrameLayout.LayoutParams {
