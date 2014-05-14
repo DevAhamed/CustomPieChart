@@ -17,6 +17,7 @@ package ahamed.view;
 
 import ahamed.view.utils.Dynamics;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -78,12 +79,14 @@ public class PieChart extends View {
 	private Paint paintPieBorder;
 	private Paint paintPieText;
 	private Paint paintLegendText;
+	
+	private int bgColor;
 
 	private int iDisplayWidth, iDisplayHeight;
 	private int iSelectedIndex = -1;
 	private int iCenterWidth = 0;
 	private int iShift = 0;
-	private int iMargin = 0; // margin to left and right, used for get Radius
+	private int iMargin = 0;
 	private int iDataSize = 0;
 
 	private RectF r = null;
@@ -103,6 +106,14 @@ public class PieChart extends View {
 
 	public PieChart(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		
+		TypedArray a = context.obtainStyledAttributes(attrs,
+				R.styleable.PieChart_Layout);
+		bgColor = a.getColor(R.styleable.PieChart_Layout_bg_color,
+				Color.WHITE);
+		a.recycle();
+		
+		this.setBackgroundColor(bgColor);
 
 		iColorListSize = PIE_COLORS.length;
 
@@ -139,7 +150,6 @@ public class PieChart extends View {
 		paintPieText.setColor(Color.DKGRAY);
 
 		Log.i(TAG, "PieChart init");
-
 	}
 
 	// set listener
@@ -163,7 +173,6 @@ public class PieChart extends View {
 
 			fEndAngle = dataPoints[i].getPosition() / totalValue * DEGREE_360;
 
-			// if the part of pie was selected then change the coordinate
 			if (iSelectedIndex == i) {
 				canvas.save(Canvas.MATRIX_SAVE_FLAG);
 				float fAngle = fStartAngle + fEndAngle / 2;
@@ -176,7 +185,6 @@ public class PieChart extends View {
 
 			canvas.drawArc(r, fStartAngle, fEndAngle, true, paintPieFill);
 
-			// if the part of pie was selected then draw a border
 			if (iSelectedIndex == i) {
 				canvas.drawArc(r, fStartAngle, fEndAngle, true, paintPieBorder);
 				canvas.restore();
@@ -184,13 +192,12 @@ public class PieChart extends View {
 			fStartAngle = fStartAngle + fEndAngle;
 			drawLegend(canvas, i);
 		}
-		paintPieFill.setColor(Color.BLACK);
+		paintPieFill.setColor(bgColor);
 		paintPieText.setTextSize(innerRectF.width() / 7F);
 		String centerText = totalValue + " Projects";
 		paintPieText.getTextBounds(centerText, 0, centerText.length(),
 				textBounds);
 		canvas.drawArc(innerRectF, 0F, 360F, true, paintPieFill);
-		// canvas.d
 		canvas.drawText(totalValue + " Projects", innerRectF.centerX(),
 				innerRectF.centerY() + textBounds.height() / 2, paintPieText);
 	}
