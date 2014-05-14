@@ -18,4 +18,9 @@
     <declare-styleable name="Choser_Layout">
         <attr name="layout_color" format="color" />
     </declare-styleable>
+    
+    <declare-styleable name="PieChart_Layout">
+        <attr name="bg_color" format="color" />
+    </declare-styleable>
+    
 </resources>
