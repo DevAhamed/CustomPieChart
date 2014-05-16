@@ -37,7 +37,6 @@ public class ChooserBottom extends FrameLayout implements OnClickListener {
 
 	public interface ChooserBottomListener {
 		public void onItemChosen(int item);
-
 	}
 
 	private static final int INDICATOR_HEIGHT = 8;
@@ -249,7 +248,7 @@ public class ChooserBottom extends FrameLayout implements OnClickListener {
 		}
 		paint.setAntiAlias(true);
 	}
-	
+
 	public void setSelectedView(View view) {
 		long now = AnimationUtils.currentAnimationTimeMillis();
 		offset.setTargetPosition(view.getLeft(), now);

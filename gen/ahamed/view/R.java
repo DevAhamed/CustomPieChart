@@ -17,7 +17,185 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
+        public static int bg_color=0x7f010001;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fletFloatingHint=0x7f010002;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static int fletHintTextColor=0x7f010004;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fletImeActionId=0x7f010007;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fletImeActionLabel=0x7f010006;
+        /** <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0x00000000</td><td></td></tr>
+<tr><td><code>actionUnspecified</code></td><td>0x00000000</td><td></td></tr>
+<tr><td><code>actionNone</code></td><td>0x00000001</td><td></td></tr>
+<tr><td><code>actionGo</code></td><td>0x00000002</td><td></td></tr>
+<tr><td><code>actionSearch</code></td><td>0x00000003</td><td></td></tr>
+<tr><td><code>actionSend</code></td><td>0x00000004</td><td></td></tr>
+<tr><td><code>actionNext</code></td><td>0x00000005</td><td></td></tr>
+<tr><td><code>actionDone</code></td><td>0x00000006</td><td></td></tr>
+<tr><td><code>actionPrevious</code></td><td>0x00000007</td><td></td></tr>
+<tr><td><code>flagNoFullscreen</code></td><td>0x2000000</td><td></td></tr>
+<tr><td><code>flagNavigatePrevious</code></td><td>0x4000000</td><td></td></tr>
+<tr><td><code>flagNavigateNext</code></td><td>0x8000000</td><td></td></tr>
+<tr><td><code>flagNoExtractUi</code></td><td>0x10000000</td><td></td></tr>
+<tr><td><code>flagNoAccessoryAction</code></td><td>0x20000000</td><td></td></tr>
+<tr><td><code>flagNoEnterAction</code></td><td>0x40000000</td><td></td></tr>
+<tr><td><code>flagForceAscii</code></td><td>0x80000000</td><td></td></tr>
+</table>
+         */
+        public static int fletImeOptions=0x7f010009;
+        /** <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0x00000000</td><td></td></tr>
+<tr><td><code>text</code></td><td>0x00000001</td><td></td></tr>
+<tr><td><code>textCapCharacters</code></td><td>0x00001001</td><td></td></tr>
+<tr><td><code>textCapWords</code></td><td>0x00002001</td><td></td></tr>
+<tr><td><code>textCapSentences</code></td><td>0x00004001</td><td></td></tr>
+<tr><td><code>textAutoCorrect</code></td><td>0x00008001</td><td></td></tr>
+<tr><td><code>textAutoComplete</code></td><td>0x00010001</td><td></td></tr>
+<tr><td><code>textMultiLine</code></td><td>0x00020001</td><td></td></tr>
+<tr><td><code>textImeMultiLine</code></td><td>0x00040001</td><td></td></tr>
+<tr><td><code>textNoSuggestions</code></td><td>0x00080001</td><td></td></tr>
+<tr><td><code>textUri</code></td><td>0x00000011</td><td></td></tr>
+<tr><td><code>textEmailAddress</code></td><td>0x00000021</td><td></td></tr>
+<tr><td><code>textEmailSubject</code></td><td>0x00000031</td><td></td></tr>
+<tr><td><code>textShortMessage</code></td><td>0x00000041</td><td></td></tr>
+<tr><td><code>textLongMessage</code></td><td>0x00000051</td><td></td></tr>
+<tr><td><code>textPersonName</code></td><td>0x00000061</td><td></td></tr>
+<tr><td><code>textPostalAddress</code></td><td>0x00000071</td><td></td></tr>
+<tr><td><code>textPassword</code></td><td>0x00000081</td><td></td></tr>
+<tr><td><code>textVisiblePassword</code></td><td>0x00000091</td><td></td></tr>
+<tr><td><code>textWebEditText</code></td><td>0x000000a1</td><td></td></tr>
+<tr><td><code>textFilter</code></td><td>0x000000b1</td><td></td></tr>
+<tr><td><code>textPhonetic</code></td><td>0x000000c1</td><td></td></tr>
+<tr><td><code>textWebEmailAddress</code></td><td>0x000000d1</td><td></td></tr>
+<tr><td><code>textWebPassword</code></td><td>0x000000e1</td><td></td></tr>
+<tr><td><code>number</code></td><td>0x00000002</td><td></td></tr>
+<tr><td><code>numberSigned</code></td><td>0x00001002</td><td></td></tr>
+<tr><td><code>numberDecimal</code></td><td>0x00002002</td><td></td></tr>
+<tr><td><code>numberPassword</code></td><td>0x00000012</td><td></td></tr>
+<tr><td><code>phone</code></td><td>0x00000003</td><td></td></tr>
+<tr><td><code>datetime</code></td><td>0x00000004</td><td></td></tr>
+<tr><td><code>date</code></td><td>0x00000014</td><td></td></tr>
+<tr><td><code>time</code></td><td>0x00000024</td><td></td></tr>
+</table>
+         */
+        public static int fletInputType=0x7f010008;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fletSingleLine=0x7f010003;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static int fletTextColor=0x7f010005;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
         public static int layout_color=0x7f010000;
+    }
+    public static final class dimen {
+        public static int flet_hint_text_padding_horizontal=0x7f040001;
+        public static int flet_hint_text_size=0x7f040000;
+    }
+    public static final class id {
+        public static int FloatLabeledEditTextEditText=0x7f030031;
+        public static int FloatLabeledEditTextHint=0x7f030030;
+        public static int actionDone=0x7f030027;
+        public static int actionGo=0x7f030023;
+        public static int actionNext=0x7f030026;
+        public static int actionNone=0x7f030022;
+        public static int actionPrevious=0x7f030028;
+        public static int actionSearch=0x7f030024;
+        public static int actionSend=0x7f030025;
+        public static int actionUnspecified=0x7f030021;
+        public static int date=0x7f03001e;
+        public static int datetime=0x7f03001d;
+        public static int flagForceAscii=0x7f03002f;
+        public static int flagNavigateNext=0x7f03002b;
+        public static int flagNavigatePrevious=0x7f03002a;
+        public static int flagNoAccessoryAction=0x7f03002d;
+        public static int flagNoEnterAction=0x7f03002e;
+        public static int flagNoExtractUi=0x7f03002c;
+        public static int flagNoFullscreen=0x7f030029;
+        public static int none=0x7f030000;
+        public static int normal=0x7f030020;
+        public static int number=0x7f030018;
+        public static int numberDecimal=0x7f03001a;
+        public static int numberPassword=0x7f03001b;
+        public static int numberSigned=0x7f030019;
+        public static int phone=0x7f03001c;
+        public static int text=0x7f030001;
+        public static int textAutoComplete=0x7f030006;
+        public static int textAutoCorrect=0x7f030005;
+        public static int textCapCharacters=0x7f030002;
+        public static int textCapSentences=0x7f030004;
+        public static int textCapWords=0x7f030003;
+        public static int textEmailAddress=0x7f03000b;
+        public static int textEmailSubject=0x7f03000c;
+        public static int textFilter=0x7f030014;
+        public static int textImeMultiLine=0x7f030008;
+        public static int textLongMessage=0x7f03000e;
+        public static int textMultiLine=0x7f030007;
+        public static int textNoSuggestions=0x7f030009;
+        public static int textPassword=0x7f030011;
+        public static int textPersonName=0x7f03000f;
+        public static int textPhonetic=0x7f030015;
+        public static int textPostalAddress=0x7f030010;
+        public static int textShortMessage=0x7f03000d;
+        public static int textUri=0x7f03000a;
+        public static int textVisiblePassword=0x7f030012;
+        public static int textWebEditText=0x7f030013;
+        public static int textWebEmailAddress=0x7f030016;
+        public static int textWebPassword=0x7f030017;
+        public static int time=0x7f03001f;
+    }
+    public static final class layout {
+        public static int widget_float_labeled_edit_text=0x7f020000;
     }
     public static final class styleable {
         /** Attributes that can be used with a Choser_Layout.
@@ -48,5 +226,219 @@ containing a value of this type.
           @attr name ahamed.view:layout_color
         */
         public static final int Choser_Layout_layout_color = 0;
+        /** Attributes that can be used with a FloatLabeledEditText.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #FloatLabeledEditText_fletFloatingHint ahamed.view:fletFloatingHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatLabeledEditText_fletHintTextColor ahamed.view:fletHintTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatLabeledEditText_fletImeActionId ahamed.view:fletImeActionId}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatLabeledEditText_fletImeActionLabel ahamed.view:fletImeActionLabel}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatLabeledEditText_fletImeOptions ahamed.view:fletImeOptions}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatLabeledEditText_fletInputType ahamed.view:fletInputType}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatLabeledEditText_fletSingleLine ahamed.view:fletSingleLine}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatLabeledEditText_fletTextColor ahamed.view:fletTextColor}</code></td><td></td></tr>
+           </table>
+           @see #FloatLabeledEditText_fletFloatingHint
+           @see #FloatLabeledEditText_fletHintTextColor
+           @see #FloatLabeledEditText_fletImeActionId
+           @see #FloatLabeledEditText_fletImeActionLabel
+           @see #FloatLabeledEditText_fletImeOptions
+           @see #FloatLabeledEditText_fletInputType
+           @see #FloatLabeledEditText_fletSingleLine
+           @see #FloatLabeledEditText_fletTextColor
+         */
+        public static final int[] FloatLabeledEditText = {
+            0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005,
+            0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009
+        };
+        /**
+          <p>This symbol is the offset where the {@link ahamed.view.R.attr#fletFloatingHint}
+          attribute's value can be found in the {@link #FloatLabeledEditText} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ahamed.view:fletFloatingHint
+        */
+        public static final int FloatLabeledEditText_fletFloatingHint = 0;
+        /**
+          <p>This symbol is the offset where the {@link ahamed.view.R.attr#fletHintTextColor}
+          attribute's value can be found in the {@link #FloatLabeledEditText} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name ahamed.view:fletHintTextColor
+        */
+        public static final int FloatLabeledEditText_fletHintTextColor = 2;
+        /**
+          <p>This symbol is the offset where the {@link ahamed.view.R.attr#fletImeActionId}
+          attribute's value can be found in the {@link #FloatLabeledEditText} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ahamed.view:fletImeActionId
+        */
+        public static final int FloatLabeledEditText_fletImeActionId = 5;
+        /**
+          <p>This symbol is the offset where the {@link ahamed.view.R.attr#fletImeActionLabel}
+          attribute's value can be found in the {@link #FloatLabeledEditText} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ahamed.view:fletImeActionLabel
+        */
+        public static final int FloatLabeledEditText_fletImeActionLabel = 4;
+        /**
+          <p>This symbol is the offset where the {@link ahamed.view.R.attr#fletImeOptions}
+          attribute's value can be found in the {@link #FloatLabeledEditText} array.
+
+
+          <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0x00000000</td><td></td></tr>
+<tr><td><code>actionUnspecified</code></td><td>0x00000000</td><td></td></tr>
+<tr><td><code>actionNone</code></td><td>0x00000001</td><td></td></tr>
+<tr><td><code>actionGo</code></td><td>0x00000002</td><td></td></tr>
+<tr><td><code>actionSearch</code></td><td>0x00000003</td><td></td></tr>
+<tr><td><code>actionSend</code></td><td>0x00000004</td><td></td></tr>
+<tr><td><code>actionNext</code></td><td>0x00000005</td><td></td></tr>
+<tr><td><code>actionDone</code></td><td>0x00000006</td><td></td></tr>
+<tr><td><code>actionPrevious</code></td><td>0x00000007</td><td></td></tr>
+<tr><td><code>flagNoFullscreen</code></td><td>0x2000000</td><td></td></tr>
+<tr><td><code>flagNavigatePrevious</code></td><td>0x4000000</td><td></td></tr>
+<tr><td><code>flagNavigateNext</code></td><td>0x8000000</td><td></td></tr>
+<tr><td><code>flagNoExtractUi</code></td><td>0x10000000</td><td></td></tr>
+<tr><td><code>flagNoAccessoryAction</code></td><td>0x20000000</td><td></td></tr>
+<tr><td><code>flagNoEnterAction</code></td><td>0x40000000</td><td></td></tr>
+<tr><td><code>flagForceAscii</code></td><td>0x80000000</td><td></td></tr>
+</table>
+          @attr name ahamed.view:fletImeOptions
+        */
+        public static final int FloatLabeledEditText_fletImeOptions = 7;
+        /**
+          <p>This symbol is the offset where the {@link ahamed.view.R.attr#fletInputType}
+          attribute's value can be found in the {@link #FloatLabeledEditText} array.
+
+
+          <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0x00000000</td><td></td></tr>
+<tr><td><code>text</code></td><td>0x00000001</td><td></td></tr>
+<tr><td><code>textCapCharacters</code></td><td>0x00001001</td><td></td></tr>
+<tr><td><code>textCapWords</code></td><td>0x00002001</td><td></td></tr>
+<tr><td><code>textCapSentences</code></td><td>0x00004001</td><td></td></tr>
+<tr><td><code>textAutoCorrect</code></td><td>0x00008001</td><td></td></tr>
+<tr><td><code>textAutoComplete</code></td><td>0x00010001</td><td></td></tr>
+<tr><td><code>textMultiLine</code></td><td>0x00020001</td><td></td></tr>
+<tr><td><code>textImeMultiLine</code></td><td>0x00040001</td><td></td></tr>
+<tr><td><code>textNoSuggestions</code></td><td>0x00080001</td><td></td></tr>
+<tr><td><code>textUri</code></td><td>0x00000011</td><td></td></tr>
+<tr><td><code>textEmailAddress</code></td><td>0x00000021</td><td></td></tr>
+<tr><td><code>textEmailSubject</code></td><td>0x00000031</td><td></td></tr>
+<tr><td><code>textShortMessage</code></td><td>0x00000041</td><td></td></tr>
+<tr><td><code>textLongMessage</code></td><td>0x00000051</td><td></td></tr>
+<tr><td><code>textPersonName</code></td><td>0x00000061</td><td></td></tr>
+<tr><td><code>textPostalAddress</code></td><td>0x00000071</td><td></td></tr>
+<tr><td><code>textPassword</code></td><td>0x00000081</td><td></td></tr>
+<tr><td><code>textVisiblePassword</code></td><td>0x00000091</td><td></td></tr>
+<tr><td><code>textWebEditText</code></td><td>0x000000a1</td><td></td></tr>
+<tr><td><code>textFilter</code></td><td>0x000000b1</td><td></td></tr>
+<tr><td><code>textPhonetic</code></td><td>0x000000c1</td><td></td></tr>
+<tr><td><code>textWebEmailAddress</code></td><td>0x000000d1</td><td></td></tr>
+<tr><td><code>textWebPassword</code></td><td>0x000000e1</td><td></td></tr>
+<tr><td><code>number</code></td><td>0x00000002</td><td></td></tr>
+<tr><td><code>numberSigned</code></td><td>0x00001002</td><td></td></tr>
+<tr><td><code>numberDecimal</code></td><td>0x00002002</td><td></td></tr>
+<tr><td><code>numberPassword</code></td><td>0x00000012</td><td></td></tr>
+<tr><td><code>phone</code></td><td>0x00000003</td><td></td></tr>
+<tr><td><code>datetime</code></td><td>0x00000004</td><td></td></tr>
+<tr><td><code>date</code></td><td>0x00000014</td><td></td></tr>
+<tr><td><code>time</code></td><td>0x00000024</td><td></td></tr>
+</table>
+          @attr name ahamed.view:fletInputType
+        */
+        public static final int FloatLabeledEditText_fletInputType = 6;
+        /**
+          <p>This symbol is the offset where the {@link ahamed.view.R.attr#fletSingleLine}
+          attribute's value can be found in the {@link #FloatLabeledEditText} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ahamed.view:fletSingleLine
+        */
+        public static final int FloatLabeledEditText_fletSingleLine = 1;
+        /**
+          <p>This symbol is the offset where the {@link ahamed.view.R.attr#fletTextColor}
+          attribute's value can be found in the {@link #FloatLabeledEditText} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name ahamed.view:fletTextColor
+        */
+        public static final int FloatLabeledEditText_fletTextColor = 3;
+        /** Attributes that can be used with a PieChart_Layout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #PieChart_Layout_bg_color ahamed.view:bg_color}</code></td><td></td></tr>
+           </table>
+           @see #PieChart_Layout_bg_color
+         */
+        public static final int[] PieChart_Layout = {
+            0x7f010001
+        };
+        /**
+          <p>This symbol is the offset where the {@link ahamed.view.R.attr#bg_color}
+          attribute's value can be found in the {@link #PieChart_Layout} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ahamed.view:bg_color
+        */
+        public static final int PieChart_Layout_bg_color = 0;
     };
 }
